@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="//bizweb.dktcdn.net/100/347/092/themes/708609/assets/favicon.png?1669886899035" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/indexreponsive.css">
+    <link rel="stylesheet" href="sanpham.css">
+</head>
+<body onload="loadpageProduct()">
+    <div class="container">
+    <header>
+        <img src="img/banner.jpg">
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm..."><i class='bx bx-search'></i>
+            </div>
+            <div class="hotline">
+                <div><p>Tư Vấn Bán Hàng</p>
+                    <span id="phoneNumber">Gọi Ngay 0337295209</span>
+                </div>
+                <span><i class='bx bxs-phone' ></i></span>
+            </div>
+            <div class="user2" id="user">
+                
+            </div>
+            <div class="cart">
+                <a href="thanhtoan.html"><span><i class='bx bxs-shopping-bags'><p id="count"></p></i></span></a> 
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">TRANG CHỦ</a>
+        <a href="">ADIDAS<i class='bx bxs-chevron-down'></i>
+            <ul>
+                <li>Ultraboots</li>
+                <li>NMD</li>
+                <li>STAN SMITH</li>
+                <li>SUPER NOVA</li>
+                <li>RESPONSE SUPER</li>
+                <li>X9000L</li>
+                <li>EQ RUN</li>
+            </ul>
+        </a>
+        <a href="">NIKE<i class='bx bxs-chevron-down'></i>
+            <ul>
+                <li>GIÀY NIKE NAM</li>
+                <li>GIÀY NIKE NỮ</li>
+            </ul>
+        </a>
+        <a href="">REEBOK</a>
+        <a href="">ĐỒNG HỒ - PHỤ KIỆN ĐIỆN TỬ<i class='bx bxs-chevron-down'></i>
+            <ul>
+                <li>ĐỒNG HỒ CHÍNH HÃNG</li>
+                <li>TAI NGHE - PHỤ KIỆN DI ĐỘNG</li>
+                <li>MÁY CẠO RÂU NHẬT</li>
+                <li>SUPER NOVA</li>
+                <li>ĐỒ GIA DỤNG</li>
+                <li>ĐIỆN TỬ ĐÃ QUA SỬ DỤNG</li>
+            </ul>
+        </a>
+        <a href="">QUẦN ÁO - PHỤ KIỆN<i class='bx bxs-chevron-down'></i>
+            <ul>
+                <li>ÁO THỂ THAO</li>
+                <li>QUẦN THỂ THAO</li>
+                <li>BỘ THỂ THAO</li>
+                <li>PHỤ KIỆN</li>
+                <li>NƯỚC HOA</li>
+                <li>KÍNH MẮT</li>
+            </ul>
+        </a>
+        <a href="">CHÍNH SÁCH<i class='bx bxs-chevron-down'></i>
+            <ul>
+                <li>THÔNG TIN ĐIỆN TỬ</li>
+                <li>CHÍNH SÁCH BẢO MẬT</li>
+                <li>CHÍNH SÁCH ĐỔI TRẢ</li>
+                <li>QUY ĐỊNH SỬ DỤNG</li>
+                <li>HƯỚNG DẪN ĐẶT HÀNG</li>
+                <li>THÔNG TIN THANH TOÁN</li>
+            </ul>
+        </a>
+    </nav>
+    <div class="menu_phone_tablet">
+        <img src="img/menu.png">
+        <input type="checkbox" class="nav__input" id="nav-mobile-input">
+    </div>
+
+    <main>
+        <div class="nav_overlay"></div>
+        <div class="nav__mobile">
+            <i class="fa-solid fa-xmark" id="private"></i>
+            <ul>
+                <li>TRANG CHỦ</li>
+                <li>ADIDAS</li>
+                <li>NIKE</li>
+                <li>REEBOK</li>
+                <li>ĐỒNG HỒ - PHỤ KIỆN ĐIỆN TỬ</li>
+                <li>QUẦN ÁO - PHỤ KIỆN</li>
+                <li>CHÍNH SÁCH</li>
+                <li>TÀI KHOẢN</li>
+            </ul>
+        </div>
+        <div id="icon_cart_plus">
+            +1<i class='bx bxs-shopping-bags'></i>
+        </div>
+        <div class="all_product" id="allProd">
+            
+        </div>
+        <div class="next" style="clear: both; text-align: right; margin-bottom: 10px; width: 100%;">
+            <a href="#" style="color: black;">trang sau -></a>
+        </div>
+        <img src="img/banner_product_noibat.png" style="width: 80%; object-fit: cover; margin-left: 10%; margin-bottom: 50px;">
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="row delivery">
+                <span><img src="img/fast-delivery.png"></span>
+                <div class="row__text">
+                    <p>VẬN CHUYỂN SIÊU TỐC</p>
+                    <span>Vận chuyển nội thành HN trong 2 tiếng!</span>
+                </div>
+            </div>
+            <div class="row swap">
+                <span><img src="img/swap.png"></span>
+                <div class="row__text">
+                    <p>Đổi hàng</p>
+                    <span>Đổi hàng trong 7 ngày miễn phí!</span>
+                </div>
+            </div>
+            <div class="row tiki">
+                <span><img src="img/save-time.png"></span>
+                <div class="row__text">
+                    <p>Tiết kiệm thời gian</p>
+                    <span>Mua sắm dễ hơn khi online</span>
+                </div>
+            </div>
+            <div class="row addr">
+                <span><img src="img/ip-address.png"></span>
+                <div class="row__text">
+                    <p>ĐỊA CHỈ CỬA HÀNG</p>
+                    <span>Tầng 3, TTTM Mỹ Đình Plaza 2 Số 2 Nguyễn Hoàng</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="top">
+            <div class="row delivery">
+                <span><img src="img/programming.png"></span>
+                <div class="row__text">
+                    <p>LẬP TRÌNH MOBILE</p>
+                    <span>PS26626 - FPOLY HCM</span>
+                </div>
+            </div>
+            <div class="row swap">
+                <span><img src="img/hotline.png"></span>
+                <div class="row__text">
+                    <p>LIÊN HỆ</p>
+                    <span>GỌI 0337.295.209</span>
+                </div>
+            </div>
+            <div class="row tiki">
+                <span><img src="img/facebook.png"></span>
+                <div class="row__text">
+                    <p>Trang FB Cá Nhân</p>
+                    <span>fb.com/0osuper</span>
+                </div>
+            </div>
+            <div class="row addr">
+                <span><img src="img/youtube.png"></span>
+                <div class="row__text">
+                    <p>KÊNH YOUTUBE</p>
+                    <span>Chưa có kênh, chắc là không có đâu</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="js/index.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
